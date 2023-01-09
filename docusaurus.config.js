@@ -15,7 +15,8 @@ const prettierConfig = JSON.parse(fs.readFileSync('./.prettierrc', 'utf-8'))
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Cypress Documentation',
-  tagline: 'Fast, easy and reliable testing for anything that runs in a browser.',
+  tagline:
+    'Fast, easy and reliable testing for anything that runs in a browser.',
   url: 'https://docs.cypress.io',
   baseUrl: '/',
   onBrokenLinks: 'warn', // TODO: update this to throw when we go live to production
@@ -37,7 +38,8 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/cypress-io/cypress-documentation/tree/master/',
+          editUrl:
+            'https://github.com/cypress-io/cypress-documentation/tree/master/',
           routeBasePath: '/',
           // versions: {
           //   current: {
@@ -56,12 +58,12 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        googleAnalytics: { 
+        googleAnalytics: {
           trackingID: 'UA-59606812-1',
         },
         gtag: {
           trackingID: 'GTM-KNKBWLD',
-        }
+        },
       },
     ],
   ],
@@ -69,7 +71,7 @@ const config = {
   plugins: [
     './plugins/fav-icon',
     './plugins/fullstory',
-    require.resolve('docusaurus-plugin-image-zoom')
+    require.resolve('docusaurus-plugin-image-zoom'),
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -203,7 +205,7 @@ const config = {
               {
                 label: 'Cypress Migrator',
                 href: 'https://migrator.cypress.io',
-              }
+              },
             ],
           },
           {
@@ -253,11 +255,11 @@ const config = {
         selector: ':not(.mediaImage, .navbar__logo img)', // don't zoom these images
         background: {
           light: 'rgb(50, 50, 50)',
-          dark: 'rgb(50, 50, 50)'
+          dark: 'rgb(50, 50, 50)',
         },
         // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
-        config: {}
-      }
+        config: {},
+      },
     },
 }
 
