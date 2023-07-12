@@ -280,7 +280,6 @@ list:**
 - `3.211.102.119` - **Dedicated IP**
 - `18.213.72.78` - **Dedicated IP**
 
-
 ## Cypress Cloud Account
 
 ### <Icon name="angle-right" /> What is my Organization ID?
@@ -363,10 +362,13 @@ Test Replay currently supports Chromium-based browsers only. You can still recor
 Test Replay is available for tests recorded using Cypress `v13` and up. Tests recorded prior to this will not have Test Replay enabled in Cypress Cloud. You will still have any artifacts collected during the pre `v13` test runs.
 
 ### <Icon name="angle-right" /> Will Test Replay write any assets to the filesystem?
+
 Yes, but it is stored in a temporary directory and deleted after the run. Nothing will need to be `.gitignored`.
 
 ### <Icon name="angle-right" /> What if my application loads assets using a CDN?
+
 **todo:** describe what could be different
 
 ### <Icon name="angle-right" /> Can I `console.log()` data in the Developer Tools panel?
+
 Yes. You may need to use `JSON.stringify(Object)` to display deeply nested data.
