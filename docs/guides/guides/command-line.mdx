@@ -121,7 +121,9 @@ cypress run [options]
 | `--env`, `-e`                  | [Specify environment variables](#cypress-run-env-lt-env-gt)                                                                                                                                   |
 | `--group`                      | [Group recorded tests together under a single run](#cypress-run-group-lt-name-gt)                                                                                                             |
 | `--headed`                     | [Displays the browser instead of running headlessly](#cypress-run-headed)                                                                                                                     |
-| `--headless`                   | Hide the browser instead of running headed (default during `cypress run`)                                                                                                                     |
+| `--headless`                   | [Hide the browser instead of running headed (default during `cypress run`)](#cypress-run-headless)                                                                                            |
+| `--runner-ui`                  | [Display the command log, application under test url bar, viewport preview, and browser dropdown while recording Test Replay (can negatively impact performance)](#cypress-run-runner-ui)     |
+| `--no-runner-ui`               | [Hide the command log, application under test url bar, viewport preview, and browser dropdown while recording Test Replay](#cypress-run-no-runner-ui)                                         |
 | `--help`, `-h`                 | Output usage information                                                                                                                                                                      |
 | `--key`, `-k`                  | [Specify your secret record key](#cypress-run-record-key-lt-record-key-gt)                                                                                                                    |
 | `--no-exit`                    | [Keep Cypress open after tests in a spec file run](#cypress-run-no-exit)                                                                                                                      |
@@ -512,6 +514,24 @@ not-found.js
 ## print exit code on Mac or Linux
 $ echo $?
 1
+```
+
+#### `cypress run --runner-ui` {#cypress-run-runner-ui}
+
+Display the command log, application under test url bar, viewport preview, and browser
+dropdown while recording Test Replay (can negatively impact performance)
+
+```shell
+cypress run --runner-ui
+```
+
+#### `cypress run --no-runner-ui` {#cypress-run-no-runner-ui}
+
+Hide the command log, application under test url bar, viewport preview, and browser
+dropdown while recording Test Replay (Test Replay default)
+
+```shell
+cypress run --no-runner-ui
 ```
 
 ### `cypress open`
